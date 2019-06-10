@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Secure Direct S3 Demo requirements
 gem 'jquery-rails'
-
+gem 'aws-sdk', '~> 3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
