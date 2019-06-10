@@ -6,18 +6,18 @@
 </p>
 
 <p>
-  <strong>File1 key:</strong>
-  <%= @user.file1_key %>
+  <strong>File1</strong>
+  <%= @user.file1_key? ? link_to(@user.file1_filename, @user.file1_secure_url) : nil %>
 </p>
 
 <p>
-  <strong>File2 key:</strong>
-  <%= @user.file2_key %>
+  <strong>File2</strong>
+  <%= @user.file2_key? ? link_to(@user.file2_filename, @user.file2_secure_url) : nil %>
 </p>
 
 <p>
-  <strong>File3 key:</strong>
-  <%= @user.file3_key %>
+  <strong>File3</strong>
+    <%= @user.file3_key? ? link_to(@user.file3_filename, @user.file3_secure_url) : nil %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

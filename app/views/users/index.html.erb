@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>File1 key</th>
-      <th>File2 key</th>
-      <th>File3 key</th>
+      <th>File1</th>
+      <th>File2</th>
+      <th>File3</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +17,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= user.file1_key %></td>
-        <td><%= user.file2_key %></td>
-        <td><%= user.file3_key %></td>
+        <td><%= user.file1_key? ? link_to(user.file1_filename, user.file1_secure_url) : nil %></td>
+        <td><%= user.file2_key? ? link_to(user.file2_filename, user.file2_secure_url) : nil %></td>
+        <td><%= user.file3_key? ? link_to(user.file3_filename, user.file3_secure_url) : nil %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
