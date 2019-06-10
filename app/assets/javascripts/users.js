@@ -2,6 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(function() {
+  document.addEventListener("turbolinks:load", function() {
     $('.directUpload').find("input:file").each(function(i, elem) {
       var fileInput    = $(elem);
       var form         = $(fileInput.parents('form:first'));
@@ -24,7 +25,7 @@ $(function() {
         },
         start: function (e) {
           submitButton.prop('disabled', true);
-  
+
           progressBar.
             css('background', 'green').
             css('display', 'block').
@@ -34,18 +35,18 @@ $(function() {
         done: function(e, data) {
           submitButton.prop('disabled', false);
           progressBar.text("Uploading done");
-  
+
           // extract key and generate URL from response
           var key   = $(data.jqXHR.responseXML).find("Key").text();
           var url   = '//' + form.data('host') + '/' + key;
-  
+
           // create hidden field
           var input = $("<input />", { type:'hidden', name: fileInput.attr('name'), value: key })
           form.append(input);
         },
         fail: function(e, data) {
           submitButton.prop('disabled', false);
-  
+
           progressBar.
             css("background", "red").
             text("Failed");
@@ -53,4 +54,4 @@ $(function() {
       });
     });
   });
-  
+});
