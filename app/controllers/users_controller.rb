@@ -72,8 +72,8 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :file1_key, :file2_key, :file3_key)
     end
-    
+
     def set_s3_direct_post
-      @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'private')
+      @s3_direct_post = S3UploadPresignedUrlCreator.call
     end
 end
