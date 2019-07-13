@@ -1,6 +1,9 @@
 # secure-direct-s3
 This is an example of how to do secure and direct to s3 uploads from a rails app. It uses the [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload) plugin and rails 5.2.3
 
+## Read the Tutorial
+If you want a step by step guide on how this all works check it out [here](https://github.com/jmatsuba/secure-direct-s3/blob/master/tutorial.md).
+
 ## Getting Started
 
 1. Clone the project
