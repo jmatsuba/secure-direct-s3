@@ -1,12 +1,13 @@
 class S3FilenameParser < ApplicationService
-  attr_reader :aws_key
+  attr_reader :s3_key
 
-  def initialize(aws_key)
-    @aws_key = aws_key
+  def initialize(s3_key)
+    raise ArgumentError, 's3 path required' if s3_key.blank?
+    @s3_key = s3_key
   end
 
   def call
-    aws_key.split('/').last
+    s3_key.split('/').last
   end
 
 end
