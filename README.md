@@ -15,7 +15,7 @@ If you want a step by step guide on how this all works check it out [here](https
 
 
 ### AWS S3 Bucket CORS setup
-In your S3 Bucket you will need to add a CORS configuration. You can find this in the permissions tab of your S3 bucket. Learn more about CORS [here](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing){: target="_blank"}.
+In your S3 Bucket you will need to add a CORS configuration. You can find this in the permissions tab of your S3 bucket. Learn more about CORS [here](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
